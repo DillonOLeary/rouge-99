@@ -6,9 +6,9 @@ from collections import defaultdict
 
 KNOWN_SUSTAINABILITY_NUMBERS = {
     "send_open_ai_chat_message": {
-        "carbon": 2.0,
-        "electricity": 4.0,
-        "water": 8.0
+        "carbon": 4.3,
+        "electricity": .001,
+        "water": 25
     }
 }
 
