@@ -24,7 +24,9 @@ if __name__ == "__main__":
     handler.send_open_ai_chat_message("write a haiku about ai").choices[0].message
     print("Calling OpenAI API")
     handler.send_open_ai_chat_message("write a haiku about ai").choices[0].message
-    
+    print("Calling OpenAI API")
+    handler.send_open_ai_chat_message("write a haiku about ai").choices[0].message
+
     print("\nReporting sustainability data from API Consumption Manager:")
     co2, kW, water = api_tracker.get_calculations()
     print(f"{round(co2, 2)}g CO2e, {round(kW, 3)}kWh, {round(water, 1)}ml water")
