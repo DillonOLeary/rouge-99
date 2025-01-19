@@ -14,18 +14,9 @@ if __name__ == "__main__":
         api_key=os.getenv("OPEN_AI_API_KEY")
     )
     handler = APIHandler(api_tracker, client)
-    print("Calling OpenAI API")
-    handler.send_open_ai_chat_message("write a haiku about ai").choices[0].message
-    print("Calling OpenAI API")
-    handler.send_open_ai_chat_message("write a haiku about ai").choices[0].message
-    print("Calling OpenAI API")
-    handler.send_open_ai_chat_message("write a haiku about ai").choices[0].message
-    print("Calling OpenAI API")
-    handler.send_open_ai_chat_message("write a haiku about ai").choices[0].message
-    print("Calling OpenAI API")
-    handler.send_open_ai_chat_message("write a haiku about ai").choices[0].message
-    print("Calling OpenAI API")
-    handler.send_open_ai_chat_message("write a haiku about ai").choices[0].message
+    for _ in range(6):
+        print("Calling OpenAI API")
+        handler.send_open_ai_chat_message("write a haiku about ai").choices[0].message
 
     print("\nReporting sustainability data from API Consumption Manager:")
     co2, kW, water = api_tracker.get_calculations()
