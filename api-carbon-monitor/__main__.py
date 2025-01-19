@@ -16,4 +16,6 @@ if __name__ == "__main__":
     handler = APIHandler(api_tracker, client)
     handler.send_open_ai_chat_message("write a haiku about ai").choices[0].message
     handler.send_open_ai_chat_message("write a haiku about ai").choices[0].message
-    print(handler.send_open_ai_chat_message("write a haiku about ai").choices[0].message)
+    handler.send_open_ai_chat_message("write a haiku about ai").choices[0].message
+    
+    print(api_tracker.get_calculations())
